@@ -3,15 +3,15 @@ import json
 
 def get_data(seed: int, number_of_datapoints: int) -> list[dict[str, any]]:
     """
-Fetches animal data from the external data-service API.
+    Fetches animal data from the external data-service API.
 
-Args:
-    seed (int): Seed to generate reproducible data.
-    number_of_datapoints (int): Number of data points to fetch.
+    Args:
+        seed (int): Seed to generate reproducible data.
+        number_of_datapoints (int): Number of data points to fetch.
 
-Returns:
-    list[dict[str, any]]: A list of data records returned from the API.
-"""
+    Returns:
+        list[dict[str, any]]: A list of data records returned from the API.
+    """
     url = "http://localhost:8777/api/v1/animals/data"
     params = {
         "seed": seed,
